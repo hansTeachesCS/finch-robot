@@ -26,7 +26,7 @@ I wanted to serve people **Oreos** as a prize for participating!
 ---
 
 ### Code to Highlight
-```
+```java
 Finch f = new Finch();	
 f.setMotors(10, 10);
 f.pause(3);
