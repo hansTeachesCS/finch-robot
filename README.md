@@ -27,14 +27,20 @@ I wanted to serve people **Oreos** as a prize for participating!
 
 ### Code to Highlight
 ```java
-Finch f = new Finch();	
-f.setMotors(10, 10);
-f.pause(3);
-f.stop();
-int t = (int)(Math.random() * 360) + 1;
-f.setTurn("R", t, 50);
-System.out.println(t);
-f.stop();
+public static void followLine(Finch f) {
+		int left = f.getLine("L");
+		int right = f.getLine("R");
+		
+		System.out.println("left: " + left + " right: " + right);
+		if (left < 90) {
+			f.setMotors(0, 10);
+		} else if (right > 90) {
+			f.setMotors(10, 0);
+		} else {
+			f.setMotors(10, 10);
+		}
+		f.pause(.1);
+	}
 ```
 
 ---
