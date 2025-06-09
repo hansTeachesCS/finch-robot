@@ -28,19 +28,19 @@ I wanted to serve people **Oreos** as a prize for participating!
 ### Code to Highlight
 ```java
 public static void followLine(Finch f) {
-		int left = f.getLine("L");
-		int right = f.getLine("R");
-		
-		System.out.println("left: " + left + " right: " + right);
-		if (left < 90) {
-			f.setMotors(0, 10);
-		} else if (right > 90) {
-			f.setMotors(10, 0);
-		} else {
-			f.setMotors(10, 10);
-		}
-		f.pause(.1);
+	int left = f.getLine("L");
+	int right = f.getLine("R");
+	
+	System.out.println("left: " + left + " right: " + right);
+	if (left < 90) {
+		f.setMotors(0, 10);
+	} else if (right > 90) {
+		f.setMotors(10, 0);
+	} else {
+		f.setMotors(10, 10);
 	}
+	f.pause(.1);
+}
 ```
 
 ---
